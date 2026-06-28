@@ -36,7 +36,7 @@ export default function Header() {
         </nav>
 
         <a href="#inscripcion" className="hidden sm:inline-flex btn-primary text-sm !py-2">
-          Inscribirme
+          Inscripciones
         </a>
 
         <button className="lg:hidden text-ink-900 text-2xl" onClick={() => setOpen((v) => !v)} aria-label="Menú">
@@ -52,7 +52,7 @@ export default function Header() {
                 {n.label}
               </a>
             ))}
-            <a href="#inscripcion" onClick={() => setOpen(false)} className="btn-primary justify-center mt-2">Inscribirme</a>
+            <a href="#inscripcion" onClick={() => setOpen(false)} className="btn-primary justify-center mt-2">Inscripciones</a>
           </div>
         </div>
       )}

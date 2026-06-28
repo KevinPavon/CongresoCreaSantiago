@@ -13,18 +13,18 @@ html {
 body {
   @apply bg-cream text-ink-900 font-sans antialiased;
   background-image:
-    radial-gradient(ellipse at top right, rgba(226,151,117,0.18), transparent 60%),
-    radial-gradient(ellipse at bottom left, rgba(62,107,62,0.14), transparent 60%);
+    radial-gradient(ellipse at top right, rgba(255,124,44,0.18), transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(51,108,47,0.14), transparent 60%);
   background-attachment: fixed;
 }
 
-::selection { background: #b85a36; color: #faf4e6; }
+::selection { background: #FF7C2C; color: #fbf5b1; }
 
 .container-x { @apply max-w-6xl mx-auto px-5 sm:px-8; }
 
 .btn-primary {
   @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-terracotta-500 text-cream font-medium
-         shadow-[0_8px_24px_-8px_rgba(184,90,54,0.6)] hover:bg-terracotta-600 hover:-translate-y-0.5
+         shadow-[0_8px_24px_-8px_rgba(255,124,44,0.6)] hover:bg-terracotta-600 hover:-translate-y-0.5
          transition-all duration-300;
 }
 .btn-ghost {
@@ -44,7 +44,7 @@ body {
 /* Custom scrollbar for horizontal scrollers */
 .scroll-x {
   scrollbar-width: thin;
-  scrollbar-color: #b85a36 transparent;
+  scrollbar-color: #FF7C2C transparent;
 }
 .scroll-x::-webkit-scrollbar { height: 8px; }
-.scroll-x::-webkit-scrollbar-thumb { background: #b85a36; border-radius: 4px; }
+.scroll-x::-webkit-scrollbar-thumb { background: #FF7C2C; border-radius: 4px; }

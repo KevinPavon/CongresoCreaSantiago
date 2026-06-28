@@ -5,54 +5,113 @@ export const event = {
   tagline: 'Región que produce, región que une',
   intro:
     'Un encuentro pensado para empresarios agropecuarios, profesionales y actores del ecosistema productivo del Chaco Santiagueño. Dos jornadas de contenido, networking y futuro compartido.',
-  date: 'Fecha a confirmar',
-  // ISO futuro para countdown; actualizar al confirmarse
-  dateISO: '2026-09-15T09:00:00-03:00',
+  date: 'MIÉ 7 y JUE 8 de octubre',
+  // ISO futuro para countdown
+  dateISO: '2026-10-07T08:30:00-03:00',
   location: 'Centro de Convenciones Fórum · Santiago del Estero',
   registrationUrl: '#',
 }
 
 export const nav = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Sobre el Congreso', href: '#sobre' },
-  { label: 'Oradores', href: '#oradores' },
-  { label: 'Programa', href: '#programa' },
-  { label: 'Sede', href: '#sede' },
-  { label: 'Inscripción', href: '#inscripcion' },
-  { label: 'Sponsors', href: '#sponsors' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio',    href: '#inicio' },
+  { label: 'Programa',  href: '#programa' },
+  { label: 'Oradores',  href: '#oradores' },
+  { label: 'Ubicación', href: '#sede' },
+]
+
+export const spaces = [
+  {
+    name: 'Auditorio',
+    desc: 'Inspiración, tendencias y casos para pensar el futuro',
+    photo: '/img/auditorio-foto.jpg',
+  },
+  {
+    name: 'Conexiones',
+    desc: 'Conversaciones, experiencias y vínculos para llevar las ideas a la acción',
+    photo: '/img/conexiones-foto.jpg',
+  },
+]
+
+export const axes = [
+  {
+    number: '01',
+    title: 'Contexto y Visión',
+    desc: 'El potencial de la región y el rol de CREA como motor de desarrollo',
+  },
+  {
+    number: '02',
+    title: 'Futuro e Inteligencia Artificial',
+    desc: 'Tendencias y oportunidades para transformar las empresas',
+  },
+  {
+    number: '03',
+    title: 'Liderazgo para la Acción',
+    desc: 'Personas y grupos que impulsan el desarrollo de las empresas y la región',
+  },
 ]
 
 export const speakers = [
-  { name: 'Orador 1', role: 'Cargo / Empresa', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
-  { name: 'Orador 2', role: 'Cargo / Empresa', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
-  { name: 'Orador 3', role: 'Cargo / Empresa', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
-  { name: 'Orador 4', role: 'Cargo / Empresa', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
-  { name: 'Orador 5', role: 'Cargo / Empresa', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
+  { name: 'Sergio "Cachito" Vigil', role: 'Exjugador y entrenador de hockey sobre césped', talkTitle: '', bio: 'Exjugador y entrenador de hockey sobre césped', photo: '/oradores/Sergio.jpg' },
+  { name: 'Fernando Preumayr', role: 'Consultor, speaker y profesor en agronegocios', talkTitle: '', bio: 'Consultor, speaker y profesor especializado en desarrollo de personas y equipos en agronegocios', photo: '/oradores/FERNANDO-PREUMAYR-1 (1).jpg' },
+  { name: 'Orador 3', role: 'Cargo / Empresa', talkTitle: '', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
+  { name: 'Orador 4', role: 'Cargo / Empresa', talkTitle: '', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
+  { name: 'Orador 5', role: 'Cargo / Empresa', talkTitle: '', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
 ]
 
 export const schedule = [
   {
     day: 'Día 1',
-    date: 'A confirmar',
-    items: [
-      { time: '09:00', title: 'Acreditación y bienvenida', desc: 'Apertura de puertas, café de inicio.' },
-      { time: '10:00', title: 'Panel inaugural', desc: 'Apertura institucional CREA.' },
-      { time: '11:30', title: 'Conferencia principal', desc: 'Orador a confirmar.' },
-      { time: '13:00', title: 'Almuerzo & networking', desc: '' },
-      { time: '15:00', title: 'Paneles simultáneos', desc: 'Ganadería · Agricultura · Gestión.' },
-      { time: '18:00', title: 'Cierre del día', desc: '' },
+    date: 'Mié 7/10',
+    tracks: [
+      {
+        name: 'Auditorio',
+        items: [
+          { time: '08:30 – 09:30', title: 'Acreditaciones' },
+          { time: '09:30 – 10:00', title: 'Bienvenida institucional' },
+          { time: '10:00 – 11:00', title: 'Panorama político y económico' },
+          { time: '11:30 – 12:00', title: 'Desarrollando "Vaca Viva" en el Chaco Argentino' },
+          { time: '12:00 – 12:20', title: 'ADN CREA como motor de desarrollo' },
+          { time: '12:30 – 14:30', title: 'Almuerzo' },
+          { time: '14:30 – 15:00', title: 'Riesgo del maíz y los modelos productivos' },
+          { time: '15:00 – 15:30', title: 'Oportunidades y desafíos de la ganadería en la región' },
+          { time: '15:30 – 16:00', title: 'El futuro de las empresas en Chaco Santiagueño' },
+          { time: '16:00 – 16:30', title: 'Panel de empresarios' },
+          { time: '16:45 – 17:30', title: 'Coffee break' },
+          { time: '17:30 – 19:30', title: 'Inteligencia Artificial aplicada al agro' },
+          { time: '20:00 – 23:00', title: 'Cena y peña CREA' },
+        ],
+      },
+      {
+        name: 'Conexiones',
+        items: [
+          { time: '14:30 – 16:00', title: 'Formación de Asesores', desc: 'Experiencia Asesor' },
+          { time: '18:30 – 19:00', title: 'Uso de IA por asesores CREA' },
+        ],
+      },
     ],
   },
   {
     day: 'Día 2',
-    date: 'A confirmar',
-    items: [
-      { time: '09:00', title: 'Apertura día 2', desc: '' },
-      { time: '10:00', title: 'Casos de estudio', desc: 'Empresas CREA de la región.' },
-      { time: '12:30', title: 'Almuerzo', desc: '' },
-      { time: '14:30', title: 'Mesa redonda', desc: 'Futuro del agro en el Chaco Santiagueño.' },
-      { time: '17:00', title: 'Cierre y brindis', desc: '' },
+    date: 'Jue 8/10',
+    tracks: [
+      {
+        name: 'Auditorio',
+        items: [
+          { time: '08:00 – 08:30', title: 'Recepción' },
+          { time: '09:00 – 09:30', title: 'Liderazgo y autoliderazgo' },
+          { time: '09:30 – 10:00', title: 'Gestión de equipos de trabajo' },
+          { time: '10:00 – 10:30', title: 'Coffee break' },
+          { time: '10:30 – 11:30', title: 'Temas técnicos en auditorio' },
+          { time: '12:00 – 13:00', title: 'Cierre inspiracional' },
+        ],
+      },
+      {
+        name: 'Conexiones',
+        items: [
+          { time: '09:00 – 10:00', title: 'Foco técnico' },
+          { time: '10:30 – 11:00', title: 'Foco empresarial' },
+        ],
+      },
     ],
   },
 ]
@@ -71,17 +130,22 @@ export const venue = {
 }
 
 export const sponsors = {
-  estrategicos: [],
-  patrocinantes: [],
-  auspiciantes: [],
+  estrategicos: [
+    { name: 'Advanta', logo: '' }, // pendiente: exportar LOGO ADVANTA.AI como PNG o SVG
+  ],
+  patrocinantes: [
+    { name: 'La Merced', logo: '/sponsors/Patrocinante/LA MERCED - NUEVO.png' },
+  ],
+  auspiciantes: [
+    { name: 'Tekron', logo: '' }, // pendiente: exportar LOGOS TEKRON.pdf como PNG o SVG
+  ],
 }
 
 export const contact = {
-  email: 'contacto@creachacosantiagueno.com',
-  phone: '',
+  person: 'Lucrecia Insaurralde',
+  role: 'Secretaria Regional',
+  email: 'regionchs@crea.org.ar',
   social: {
-    instagram: '#',
-    facebook: '#',
-    linkedin: '#',
+    instagram: 'https://www.instagram.com/crearegionchs?igsh=MXV5YzhvOGt5cndzOA==',
   },
 }

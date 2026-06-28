@@ -78,50 +78,30 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — visual card + countdown */}
+        {/* Right — logo + countdown */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
           className="relative"
         >
-          <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-to-br from-terracotta-400 via-sand-300 to-forest-500 shadow-2xl">
-            <div className="absolute inset-0 bg-topo opacity-40 mix-blend-multiply" />
-            {/* silhouette landscape */}
-            <svg viewBox="0 0 400 500" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0" stopColor="#fbf7ee" stopOpacity="0.15" />
-                  <stop offset="1" stopColor="#1f3c22" stopOpacity="0.35" />
-                </linearGradient>
-              </defs>
-              <rect width="400" height="500" fill="url(#sky)" />
-              <circle cx="310" cy="110" r="52" fill="#faf4e6" fillOpacity="0.85" />
-              <path d="M0 360 Q60 320 120 340 T260 330 T400 350 L400 500 L0 500 Z" fill="#2d5130" fillOpacity="0.85" />
-              <path d="M0 400 Q80 370 160 385 T340 380 T400 395 L400 500 L0 500 Z" fill="#1f3c22" />
-              {/* Quebracho */}
-              <g transform="translate(70 330)">
-                <rect x="-3" y="0" width="6" height="70" fill="#3a2a1f" />
-                <circle cx="0" cy="-6" r="22" fill="#3e6b3e" />
-                <circle cx="-14" cy="4" r="16" fill="#3e6b3e" />
-                <circle cx="14" cy="4" r="16" fill="#3e6b3e" />
-              </g>
-              <g transform="translate(280 310)">
-                <rect x="-3" y="0" width="6" height="85" fill="#3a2a1f" />
-                <circle cx="0" cy="-10" r="28" fill="#3e6b3e" />
-                <circle cx="-18" cy="0" r="18" fill="#3e6b3e" />
-                <circle cx="18" cy="0" r="18" fill="#3e6b3e" />
-              </g>
-            </svg>
+          <div className="relative rounded-[2rem] overflow-hidden bg-cream shadow-2xl p-10 flex flex-col items-center gap-8">
+            {/* Logo */}
+            <img
+              src="/img/LOGOS CHS_horizontal_Crea.png"
+              alt="Congreso CREA Chaco Santiagueño"
+              className="w-full max-w-sm object-contain"
+            />
 
-            <div className="absolute bottom-5 left-5 right-5 bg-cream/95 backdrop-blur rounded-2xl p-4 shadow-lg">
+            {/* Countdown */}
+            <div className="w-full bg-cream/95 backdrop-blur rounded-2xl p-4 shadow-lg">
               <div className="text-xs uppercase tracking-widest text-terracotta-600 font-semibold mb-2">Cuenta regresiva</div>
               <div className="grid grid-cols-4 gap-2 text-center">
                 {[
                   { l: 'Días', v: c.d },
-                  { l: 'Hs', v: c.h },
-                  { l: 'Min', v: c.m },
-                  { l: 'Seg', v: c.s },
+                  { l: 'Hs',   v: c.h },
+                  { l: 'Min',  v: c.m },
+                  { l: 'Seg',  v: c.s },
                 ].map((x) => (
                   <div key={x.l} className="bg-forest-700 text-cream rounded-xl py-2">
                     <div className="font-display text-2xl font-bold leading-none">{String(x.v).padStart(2, '0')}</div>

@@ -19,25 +19,26 @@ export default function Header() {
       }`}
     >
       <div className="container-x flex items-center justify-between h-16 sm:h-20">
-        <a href="#inicio" className="flex items-center gap-2 group">
-          <span className="w-9 h-9 rounded-full bg-terracotta-500 text-cream grid place-content-center font-display font-bold text-lg group-hover:rotate-12 transition-transform">C</span>
-          <span className="font-display font-semibold text-ink-900 leading-tight text-sm sm:text-base">
-            {event.shortName}
-            <span className="block text-[10px] tracking-[0.24em] uppercase text-forest-600 font-sans">Chaco Santiagueño</span>
-          </span>
+        <a href="#inicio" className="flex items-center group">
+          <img
+            src="/img/LOGOS CHS_horizontal.png"
+            alt="Congreso CREA Chaco Santiagueño"
+            className="h-16 sm:h-20 w-auto object-contain"
+          />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-7">
-          {nav.map((n) => (
-            <a key={n.href} href={n.href} className="text-sm text-ink-700 hover:text-terracotta-600 transition-colors">
-              {n.label}
-            </a>
-          ))}
-        </nav>
-
-        <a href="#inscripcion" className="hidden sm:inline-flex btn-primary text-sm !py-2">
-          Inscripciones
-        </a>
+        <div className="hidden lg:flex items-center gap-7">
+          <nav className="flex items-center gap-7">
+            {nav.map((n) => (
+              <a key={n.href} href={n.href} className="text-sm text-ink-700 hover:text-terracotta-600 transition-colors">
+                {n.label}
+              </a>
+            ))}
+          </nav>
+          <a href="#inscripcion" className="btn-primary text-sm !py-2">
+            Inscripciones
+          </a>
+        </div>
 
         <button className="lg:hidden text-ink-900 text-2xl" onClick={() => setOpen((v) => !v)} aria-label="Menú">
           {open ? <HiX /> : <HiMenu />}

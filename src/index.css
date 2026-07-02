@@ -14,8 +14,12 @@ body {
   @apply bg-cream text-ink-900 font-sans antialiased;
   background-image:
     radial-gradient(ellipse at top right, rgba(255,124,44,0.18), transparent 60%),
-    radial-gradient(ellipse at bottom left, rgba(51,108,47,0.14), transparent 60%);
-  background-attachment: fixed;
+    radial-gradient(ellipse at bottom left, rgba(51,108,47,0.14), transparent 60%),
+    linear-gradient(rgba(251,245,177,0.88), rgba(251,245,177,0.88)),
+    url('/img/Trama (1).svg');
+  background-repeat: no-repeat, no-repeat, repeat, repeat;
+  background-size: cover, cover, auto, 600px auto;
+  background-attachment: fixed, fixed, scroll, scroll;
 }
 
 ::selection { background: #FF7C2C; color: #fbf5b1; }

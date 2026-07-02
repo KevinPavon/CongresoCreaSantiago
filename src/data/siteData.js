@@ -30,6 +30,11 @@ export const spaces = [
     desc: 'Conversaciones, experiencias y vínculos para llevar las ideas a la acción',
     photo: '/img/conexiones-foto.jpg',
   },
+  {
+    name: 'Patio Santiagueño',
+    desc: 'Relajar, conectar y disfrutar juntos',
+    photo: '/img/patio.jpg',
+  },
 ]
 
 export const axes = [
@@ -53,9 +58,9 @@ export const axes = [
 export const speakers = [
   { name: 'Sergio "Cachito" Vigil', role: 'Exjugador y entrenador de hockey sobre césped', talkTitle: '', bio: 'Exjugador y entrenador de hockey sobre césped', photo: '/oradores/Sergio.jpg' },
   { name: 'Fernando Preumayr', role: 'Consultor, speaker y profesor en agronegocios', talkTitle: '', bio: 'Consultor, speaker y profesor especializado en desarrollo de personas y equipos en agronegocios', photo: '/oradores/FERNANDO-PREUMAYR-1 (1).jpg' },
-  { name: 'Orador 3', role: 'Cargo / Empresa', talkTitle: '', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
-  { name: 'Orador 4', role: 'Cargo / Empresa', talkTitle: '', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
-  { name: 'Orador 5', role: 'Cargo / Empresa', talkTitle: '', bio: 'Breve bio (máx 200 caracteres).', photo: '' },
+  { name: 'Juan Manuel Garzón', role: 'Economista, investigador IERAL de Fundación Mediterránea', talkTitle: '', bio: '', photo: '/oradores/Garzón.jpg' },
+  { name: 'Pedro Meriggiola', role: 'Asesor CREA Barranca - Yaco | Región Córdoba Norte (COR)', talkTitle: '', bio: '', photo: '/oradores/PEDRO.webp' },
+  { name: 'Ricardo Bindi', role: 'Asesor CREA Barranca - Yaco | Región Córdoba Norte (COR)', talkTitle: '', bio: '', photo: '/oradores/BINDI.webp' },
 ]
 
 export const schedule = [

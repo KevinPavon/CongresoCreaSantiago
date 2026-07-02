@@ -1,6 +1,5 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
-import About from './components/About'
 import Axes from './components/Axes'
 import Spaces from './components/Spaces'
 import Speakers from './components/Speakers'
@@ -17,9 +16,8 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Axes />
         <Spaces />
+        <Axes />
         <Speakers />
         <Schedule />
         <Venue />

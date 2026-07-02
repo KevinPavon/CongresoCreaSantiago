@@ -6,7 +6,7 @@ export default function Spaces() {
     <section id="espacios" className="py-24 sm:py-32">
       <div className="container-x">
         <ScrollReveal>
-          <p className="eyebrow">Espacios</p>
+          <p className="eyebrow text-terracotta-500">EXPERIENCIAS</p>
           <h2 className="h-display text-4xl sm:text-5xl mt-3">Espacios para conectarnos</h2>
         </ScrollReveal>
 

@@ -40,18 +40,24 @@ export const spaces = [
 export const axes = [
   {
     number: '01',
-    title: 'Contexto y Visión',
+    title: 'Contexto y visión',
     desc: 'El potencial de la región y el rol de CREA como motor de desarrollo',
+    icon: '/img/CONTEXTO Y VISION.png',
+    color: 'green',
   },
   {
     number: '02',
-    title: 'Futuro e Inteligencia Artificial',
+    title: 'Futuro e inteligencia artificial',
     desc: 'Tendencias y oportunidades para transformar las empresas',
+    icon: '/img/FUTURO.png',
+    color: 'orange',
   },
   {
     number: '03',
-    title: 'Liderazgo para la Acción',
+    title: 'Liderazgo para la acción',
     desc: 'Personas y grupos que impulsan el desarrollo de las empresas y la región',
+    icon: '/img/LIDERAZGO.png',
+    color: 'green',
   },
 ]
 
@@ -60,7 +66,7 @@ export const speakers = [
   { name: 'Fernando Preumayr', role: 'Consultor, speaker y profesor en agronegocios', talkTitle: '', bio: 'Consultor, speaker y profesor especializado en desarrollo de personas y equipos en agronegocios', photo: '/oradores/FERNANDO-PREUMAYR-1 (1).jpg' },
   { name: 'Juan Manuel Garzón', role: 'Economista, investigador IERAL de Fundación Mediterránea', talkTitle: '', bio: '', photo: '/oradores/Garzón.jpg' },
   { name: 'Pedro Meriggiola', role: 'Asesor CREA Barranca - Yaco | Región Córdoba Norte (COR)', talkTitle: '', bio: '', photo: '/oradores/PEDRO.webp' },
-  { name: 'Ricardo Bindi', role: 'Asesor CREA Barranca - Yaco | Región Córdoba Norte (COR)', talkTitle: '', bio: '', photo: '/oradores/BINDI.webp' },
+  { name: 'Ricardo Bindi', role: 'Presidente y director de contenidos de Agrositio S.A. Conductor del evento', bio: '', photo: '/oradores/BINDI.webp' },
 ]
 
 export const schedule = [
@@ -89,8 +95,7 @@ export const schedule = [
       {
         name: 'Conexiones',
         items: [
-          { time: '14:30 – 16:00', title: 'Formación de Asesores', desc: 'Experiencia Asesor' },
-          { time: '18:30 – 19:00', title: 'Uso de IA por asesores CREA' },
+          { time: '14:30 – 16:30', title: 'Encuentro con Asesores CREA', desc: 'Para profesionales y estudiantes del sector agro que quieran conocer el rol del Asesor CREA, su metodología y ser parte de una red con oportunidades de crecimiento.' },
         ],
       },
     ],
@@ -113,8 +118,7 @@ export const schedule = [
       {
         name: 'Conexiones',
         items: [
-          { time: '09:00 – 10:00', title: 'Foco técnico' },
-          { time: '10:30 – 11:00', title: 'Foco empresarial' },
+          { time: '14:30 – 16:30', title: 'Encuentro con Asesores CREA', desc: 'Para profesionales y estudiantes del sector agro que quieran conocer el rol del Asesor CREA, su metodología y ser parte de una red con oportunidades de crecimiento.' },
         ],
       },
     ],

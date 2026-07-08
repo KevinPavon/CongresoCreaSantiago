@@ -14,16 +14,16 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-cream/85 backdrop-blur-md shadow-[0_2px_20px_-10px_rgba(28,19,13,0.25)]' : 'bg-transparent'
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white ${
+        scrolled ? 'shadow-[0_2px_20px_-10px_rgba(28,19,13,0.25)]' : ''
       }`}
     >
-      <div className="container-x flex items-center justify-between h-16 sm:h-20">
+      <div className="container-x flex items-center justify-between h-20 sm:h-28">
         <a href="#inicio" className="flex items-center group">
           <img
             src="/img/LOGOS CHS_horizontal.png"
             alt="Congreso CREA Chaco Santiagueño"
-            className="h-16 sm:h-20 w-auto object-contain"
+            className="h-20 sm:h-28 w-auto object-contain"
           />
         </a>
 

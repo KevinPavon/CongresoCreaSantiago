@@ -16,12 +16,12 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Spaces />
+        <Registration />
         <Axes />
+        <Spaces />
         <Speakers />
         <Schedule />
         <Venue />
-        <Registration />
         <Sponsors />
       </main>
       <Footer />

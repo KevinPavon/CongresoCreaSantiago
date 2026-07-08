@@ -25,11 +25,11 @@ export default function Speakers() {
   }
 
   return (
-    <section id="oradores" className="py-24 sm:py-32">
+    <section id="oradores" className="py-14 sm:py-20">
       <div className="container-x">
         <ScrollReveal>
           <p className="eyebrow">Oradores</p>
-          <h2 className="h-display text-4xl sm:text-5xl mt-3">Voces que mueven al agro</h2>
+          <h2 className="h-display text-4xl sm:text-5xl mt-3">Conocé a quienes te inspirarán en el Congreso</h2>
         </ScrollReveal>
 
         <div className="relative mt-12">
@@ -48,7 +48,7 @@ export default function Speakers() {
             {speakers.map((s, i) => (
               <article
                 key={i}
-                className="group rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 shrink-0 w-64 sm:w-72 snap-start"
+                className="group rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 shrink-0 w-64 sm:w-72 snap-start flex flex-col"
               >
                 <div className="relative aspect-[3/4] bg-gradient-to-br from-sand-200 via-terracotta-300 to-forest-500 overflow-hidden">
                   {s.photo ? (
@@ -63,10 +63,10 @@ export default function Speakers() {
                       {s.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
                     </div>
                   )}
-                  <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-ink-900/85 via-ink-900/40 to-transparent text-cream">
-                    <div className="font-display text-xl leading-tight">{s.name}</div>
-                    <div className="text-xs mt-1 text-cream/80">{s.role}</div>
-                  </div>
+                </div>
+                <div className={`px-5 py-4 text-cream flex-1 ${i % 2 === 0 ? 'bg-forest-700' : 'bg-terracotta-600'}`}>
+                  <div className="font-display text-xl leading-tight">{s.name}</div>
+                  <div className="text-xs mt-1 text-cream/80">{s.role}</div>
                 </div>
               </article>
             ))}

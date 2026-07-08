@@ -3,19 +3,20 @@ import { spaces } from '../data/siteData'
 
 export default function Spaces() {
   return (
-    <section id="espacios" className="py-24 sm:py-32">
-      <div className="container-x">
+    <section id="espacios" className="relative py-14 sm:py-20 bg-white">
+      <img src="/img/Trama (1).svg" alt="" className="pointer-events-none absolute inset-0 w-full h-full object-cover opacity-[0.07]" aria-hidden />
+      <div className="container-x relative">
         <ScrollReveal>
           <p className="eyebrow text-terracotta-500">EXPERIENCIAS</p>
           <h2 className="h-display text-4xl sm:text-5xl mt-3">Espacios para conectarnos</h2>
         </ScrollReveal>
 
-        <div className="mt-12 grid sm:grid-cols-2 gap-6">
+        <div className="mt-12 grid sm:grid-cols-3 gap-6">
           {spaces.map((sp, i) => (
             <ScrollReveal key={sp.name} delay={i * 0.12} className="h-full">
               <article className="group rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 h-full flex flex-col">
                 {/* Foto */}
-                <div className="relative aspect-[16/10] overflow-hidden shrink-0">
+                <div className="relative aspect-[4/3] overflow-hidden shrink-0">
                   <img
                     src={sp.photo}
                     alt={sp.name}

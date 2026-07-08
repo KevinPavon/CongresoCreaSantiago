@@ -9,11 +9,11 @@ const tiers = [
 
 export default function Sponsors() {
   return (
-    <section id="sponsors" className="py-24 sm:py-32">
+    <section id="sponsors" className="py-14 sm:py-20 bg-white">
       <div className="container-x">
         <ScrollReveal>
-          <p className="eyebrow">Sponsors y alianzas</p>
-          <h2 className="h-display text-4xl sm:text-5xl mt-3">Quienes hacen posible el congreso</h2>
+          <p className="eyebrow">Nos acompañan</p>
+          <h2 className="h-display text-4xl sm:text-5xl mt-3">Quienes hacen posible este encuentro</h2>
         </ScrollReveal>
 
         <div className="mt-14 space-y-14">
@@ -33,14 +33,14 @@ export default function Sponsors() {
                       s.logo ? (
                         <div
                           key={i}
-                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-cream border border-sand-200 hover:border-terracotta-400 hover:shadow-md transition-all duration-300 grid place-content-center p-5`}
+                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 hover:shadow-md transition-all duration-300 grid place-content-center p-5`}
                         >
                           <img src={s.logo} alt={s.name} className="max-h-full max-w-full object-contain" />
                         </div>
                       ) : (
                         <div
                           key={i}
-                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-cream border border-dashed border-sand-300 grid place-content-center p-5`}
+                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-white border border-dashed border-sand-300 grid place-content-center p-5`}
                         >
                           <span className="text-sm text-ink-700/50 font-medium">{s.name}</span>
                         </div>

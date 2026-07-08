@@ -10,7 +10,7 @@ const pillars = [
 
 export default function About() {
   return (
-    <section id="sobre" className="py-24 sm:py-32 relative">
+    <section id="sobre" className="py-14 sm:py-20 relative">
       <div className="container-x">
         <ScrollReveal>
           <p className="eyebrow">Sobre el congreso</p>

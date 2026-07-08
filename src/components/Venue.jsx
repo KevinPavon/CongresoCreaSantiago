@@ -4,7 +4,7 @@ import { venue } from '../data/siteData'
 
 export default function Venue() {
   return (
-    <section id="sede" className="py-24 sm:py-32 bg-gradient-to-b from-transparent via-sand-100/60 to-transparent">
+    <section id="sede" className="py-14 sm:py-20 bg-gradient-to-b from-transparent via-sand-100/60 to-transparent">
       <div className="container-x grid lg:grid-cols-[1fr_0.9fr] gap-10 items-start">
         <ScrollReveal>
           <p className="eyebrow">Sede y alojamiento</p>

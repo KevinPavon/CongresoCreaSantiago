@@ -14,7 +14,7 @@ export default function Schedule() {
   }
 
   return (
-    <section id="programa" className="relative py-24 sm:py-32 overflow-hidden">
+    <section id="programa" className="relative py-14 sm:py-20 overflow-hidden bg-white">
       {/* Trama de fondo */}
       <div
         className="pointer-events-none absolute inset-0 -z-10 opacity-[0.07]"
@@ -24,7 +24,7 @@ export default function Schedule() {
       <div className="container-x">
         <ScrollReveal>
           <p className="eyebrow">Programa</p>
-          <h2 className="h-display text-4xl sm:text-5xl mt-3">Dos jornadas, una agenda intensa</h2>
+          <h2 className="h-display text-4xl sm:text-5xl mt-3">Dos días para pensar e intercambiar</h2>
         </ScrollReveal>
 
         {/* Pestañas de día */}
@@ -33,7 +33,7 @@ export default function Schedule() {
             <button
               key={i}
               onClick={() => handleDayChange(i)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition ${
+              className={`px-5 py-2.5 rounded-full text-sm font-medium uppercase tracking-wide transition ${
                 activeDay === i
                   ? 'bg-forest-700 text-cream shadow'
                   : 'bg-cream text-forest-700 border border-forest-700/20 hover:border-forest-700'

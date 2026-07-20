@@ -66,7 +66,8 @@ export const speakers = [
   { name: 'Fernando Preumayr', role: 'Consultor, speaker y profesor en agronegocios', talkTitle: '', bio: 'Consultor, speaker y profesor especializado en desarrollo de personas y equipos en agronegocios', photo: '/oradores/FERNANDO-PREUMAYR-1 (1).jpg' },
   { name: 'Juan Manuel Garzón', role: 'Economista, investigador IERAL de Fundación Mediterránea', talkTitle: '', bio: '', photo: '/oradores/Garzón.jpg' },
   { name: 'Pedro Meriggiola', role: 'Asesor CREA Barranca - Yaco | Región Córdoba Norte (COR)', talkTitle: '', bio: '', photo: '/oradores/PEDRO.webp' },
-  { name: 'Ricardo Bindi', role: 'Presidente y director de contenidos de Agrositio S.A. Conductor del evento', bio: '', photo: '/oradores/BINDI.webp' },
+  // photo pendiente: falta el recurso de Ricardo Bindi. Con photo vacio se muestran las iniciales sobre el degradado.
+  { name: 'Ricardo Bindi', role: 'Presidente y director de contenidos de Agrositio S.A. Conductor del evento', bio: '', photo: '' },
 ]
 
 export const schedule = [

@@ -21,11 +21,9 @@ export default function Header() {
       <div className="container-x flex items-center justify-between h-20 sm:h-28">
         <a href="#inicio" className="flex items-center group">
           <img
-            src="/img/isotipo_chs.png"
+            src="/img/LOGOS CHS_horizontal.png"
             alt="Congreso CREA Chaco Santiagueño"
-            width="513"
-            height="513"
-            className="h-14 sm:h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-20 sm:h-28 w-auto object-contain"
           />
         </a>
 

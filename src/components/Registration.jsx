@@ -12,7 +12,20 @@ export default function Registration() {
 
             {/* Imagen de evento con filtro verde */}
             <div className="absolute inset-0">
-              <img src="/img/CREA-DIA01-1719.jpg" alt="" className="w-full h-full object-cover object-center" />
+              <picture className="block w-full h-full">
+                <source
+                  type="image/webp"
+                  srcSet="/img/inscripcion_chs_mobile.webp 960w, /img/inscripcion_chs.webp 1920w"
+                  sizes="(max-width: 640px) 100vw, min(100vw, 1152px)"
+                />
+                <img
+                  src="/img/inscripcion_chs.jpg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-center"
+                />
+              </picture>
               <div className="absolute inset-0 bg-forest-700/75 mix-blend-multiply" />
             </div>
 

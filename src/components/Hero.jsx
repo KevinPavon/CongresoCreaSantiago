@@ -27,15 +27,29 @@ export default function Hero() {
 
       <div className="container-x relative flex flex-col items-center text-center gap-10">
 
-        {/* Logo central */}
-        <motion.img
-          src="/img/LOGOS CHS_horizontal_Crea.png"
-          alt="Congreso CREA Chaco Santiagueño"
+        {/* Imagen principal */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-2xl object-contain"
-        />
+          className="w-full max-w-4xl rounded-[2rem] overflow-hidden shadow-2xl"
+        >
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/img/hero_chs_mobile.webp 960w, /img/hero_chs.webp 1920w"
+              sizes="(max-width: 640px) 100vw, min(100vw, 896px)"
+            />
+            <img
+              src="/img/hero_chs.jpg"
+              alt="Congreso CREA Chaco Santiagueño"
+              width="1920"
+              height="1079"
+              fetchPriority="high"
+              className="w-full aspect-[16/9] object-cover"
+            />
+          </picture>
+        </motion.div>
 
         {/* Badge fecha y lugar */}
         <motion.div

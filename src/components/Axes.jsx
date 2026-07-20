@@ -7,7 +7,7 @@ export default function Axes() {
       <div className="container-x">
         <ScrollReveal>
           <p className="eyebrow">Hilos temáticos</p>
-          <h2 className="h-display text-4xl sm:text-5xl mt-3 text-ink-900 max-w-2xl">
+          <h2 className="h-display text-4xl sm:text-5xl mt-3 text-ink-900 text-balance lg:whitespace-nowrap">
             Para pensar el presente y construir el futuro
           </h2>
         </ScrollReveal>

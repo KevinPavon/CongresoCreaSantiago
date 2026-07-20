@@ -12,16 +12,27 @@ export default function Spaces() {
         </ScrollReveal>
 
         <div className="mt-12 grid sm:grid-cols-3 gap-6">
-          {spaces.map((sp, i) => (
+          {spaces.map((sp, i) => {
+            const base = sp.photo.replace(/\.jpg$/, '')
+            return (
             <ScrollReveal key={sp.name} delay={i * 0.12} className="h-full">
               <article className="group rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 h-full flex flex-col">
                 {/* Foto */}
                 <div className="relative aspect-[4/3] overflow-hidden shrink-0">
-                  <img
-                    src={sp.photo}
-                    alt={sp.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <picture className="block w-full h-full">
+                    <source
+                      type="image/webp"
+                      srcSet={`${base}-sm.webp 400w, ${base}.webp 800w`}
+                      sizes="(max-width: 640px) 100vw, 380px"
+                    />
+                    <img
+                      src={sp.photo}
+                      alt={sp.name}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </picture>
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-ink-900/20 to-transparent" />
                   {/* Nombre sobre la foto */}
                   <div className="absolute bottom-0 inset-x-0 p-6">
@@ -34,7 +45,8 @@ export default function Spaces() {
                 </div>
               </article>
             </ScrollReveal>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

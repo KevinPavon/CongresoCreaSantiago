@@ -18,12 +18,13 @@ export default function Registration() {
                   srcSet="/img/inscripcion_chs_mobile.webp 960w, /img/inscripcion_chs.webp 1920w"
                   sizes="(max-width: 640px) 100vw, min(100vw, 1152px)"
                 />
+                {/* object-position corrido hacia arriba para no cortar las cabezas */}
                 <img
                   src="/img/inscripcion_chs.jpg"
                   alt=""
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-[center_22%]"
                 />
               </picture>
               <div className="absolute inset-0 bg-forest-700/75 mix-blend-multiply" />
@@ -32,12 +33,12 @@ export default function Registration() {
             <div className="relative max-w-2xl">
               <p className="eyebrow !text-sand-200">Inscripción</p>
               <h2 className="h-display text-4xl sm:text-6xl mt-3 leading-[1.05]">
-                ¡Inscribite <span className="italic">ahora</span>!
+                ¡Inscribite ahora!
               </h2>
               <p className="mt-5 text-lg text-cream/90">
                 Completá el formulario y asegurá tu lugar.
               </p>
-              <a href={event.registrationUrl} className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-full bg-cream text-forest-700 font-semibold hover:bg-sand-100 hover:-translate-y-0.5 transition-all">
+              <a href={event.registrationUrl} className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-full bg-terracotta-500 text-cream font-semibold shadow-lg hover:bg-terracotta-400 hover:-translate-y-0.5 transition-all">
                 Quiero mi entrada <HiArrowRight />
               </a>
             </div>

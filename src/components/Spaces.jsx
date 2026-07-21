@@ -39,9 +39,10 @@ export default function Spaces() {
                     <h3 className="font-display text-3xl text-cream">{sp.name}</h3>
                   </div>
                 </div>
-                {/* Descripción */}
-                <div className="bg-cream border border-t-0 border-sand-200 group-hover:border-terracotta-400 p-6 transition-colors duration-500 flex-1">
-                  <p className="text-ink-700 text-base leading-relaxed">{sp.desc}</p>
+                {/* Descripción — misma alternancia de color que las tarjetas de oradores:
+                    Auditorio y Patio Santiagueño en verde, Conexiones en naranja. */}
+                <div className={`p-6 flex-1 text-cream ${i % 2 === 0 ? 'bg-forest-700' : 'bg-terracotta-600'}`}>
+                  <p className="text-base leading-relaxed text-cream/90">{sp.desc}</p>
                 </div>
               </article>
             </ScrollReveal>

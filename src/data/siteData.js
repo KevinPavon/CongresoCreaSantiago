@@ -8,7 +8,8 @@ export const event = {
   date: 'MIÉ 7 y JUE 8 de octubre',
   // ISO futuro para countdown
   dateISO: '2026-10-07T08:30:00-03:00',
-  location: 'Centro de Convenciones Fórum · Santiago del Estero',
+  // Se muestra en dos lineas en el hero, cortando por la coma (formato del flyer).
+  location: 'Centro de Convenciones Fórum, Santiago del Estero',
   registrationUrl: '#',
 }
 

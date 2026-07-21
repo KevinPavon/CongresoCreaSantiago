@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { HiLocationMarker } from 'react-icons/hi'
 import { useEffect, useState } from 'react'
 import { event } from '../data/siteData'
 
@@ -22,54 +21,60 @@ function diff(target) {
 
 export default function Hero() {
   const c = useCountdown(event.dateISO)
+  const [sede, ciudad] = event.location.split(', ')
+
   return (
-    <section id="inicio" className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden">
+    <section id="inicio" className="relative overflow-hidden">
+      {/* Foto al corte, ocupa todo el ancho */}
+      <div className="absolute inset-0">
+        <picture className="block w-full h-full">
+          <source
+            type="image/webp"
+            srcSet="/img/hero_chs_mobile.webp 960w, /img/hero_chs.webp 1920w"
+            sizes="100vw"
+          />
+          <img
+            src="/img/hero_chs.jpg"
+            alt="Congreso CREA Chaco Santiagueño"
+            fetchPriority="high"
+            className="w-full h-full object-cover object-center"
+          />
+        </picture>
+        {/* Tinte verde de marca, en la linea del tratamiento de la seccion de inscripcion
+            pero mas suave, para que la foto conserve presencia. */}
+        <div className="absolute inset-0 bg-forest-700/55 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-800/55 via-transparent to-forest-800/25" />
+      </div>
 
-      <div className="container-x relative flex flex-col items-center text-center gap-10">
-
-        {/* Imagen principal */}
+      {/* Contenido sobre la imagen */}
+      <div className="relative container-x flex flex-col items-center text-center gap-8 sm:gap-10 pt-32 sm:pt-44 pb-16 sm:pb-20">
+        {/* Fecha y lugar, respetando el formato del flyer */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full max-w-4xl rounded-[2rem] overflow-hidden shadow-2xl"
+          transition={{ duration: 0.6 }}
+          className="bg-cream rounded-2xl border-2 border-forest-400 shadow-xl px-8 py-5 sm:px-14 sm:py-7"
         >
-          <picture>
-            <source
-              type="image/webp"
-              srcSet="/img/hero_chs_mobile.webp 960w, /img/hero_chs.webp 1920w"
-              sizes="(max-width: 640px) 100vw, min(100vw, 896px)"
-            />
-            <img
-              src="/img/hero_chs.jpg"
-              alt="Congreso CREA Chaco Santiagueño"
-              width="1920"
-              height="1079"
-              fetchPriority="high"
-              className="w-full aspect-[16/9] object-cover"
-            />
-          </picture>
-        </motion.div>
-
-        {/* Badge fecha y lugar */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-forest-800/70 backdrop-blur-sm text-cream rounded-2xl px-10 py-5 border border-forest-600/40"
-        >
-          <div className="text-2xl sm:text-3xl font-bold tracking-wide">{event.date}</div>
-          <div className="text-base sm:text-lg opacity-80 mt-1">{event.location}</div>
+          <div className="font-display text-2xl sm:text-4xl font-bold text-forest-600 tracking-wide">
+            {event.date}
+          </div>
+          <div className="h-0.5 bg-terracotta-500 my-3 sm:my-4" />
+          <div className="text-base sm:text-xl text-ink-900 leading-snug">
+            {sede},<br />
+            {ciudad}
+          </div>
         </motion.div>
 
         {/* Cuenta regresiva */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
           className="w-full max-w-lg"
         >
-          <div className="text-sm uppercase tracking-widest text-terracotta-600 font-semibold mb-4">Cuenta regresiva</div>
+          <div className="text-sm uppercase tracking-widest text-cream font-semibold mb-4 drop-shadow">
+            Cuenta regresiva
+          </div>
           <div className="grid grid-cols-4 gap-3 text-center">
             {[
               { l: 'Días', v: c.d },
@@ -77,17 +82,19 @@ export default function Hero() {
               { l: 'Min',  v: c.m },
               { l: 'Seg',  v: c.s },
             ].map((x) => (
-              <div key={x.l} className="bg-forest-700 text-cream rounded-2xl py-5">
-                <div className="font-display text-4xl sm:text-5xl font-bold leading-none">{String(x.v).padStart(2, '0')}</div>
-                <div className="text-xs uppercase tracking-widest opacity-80 mt-2">{x.l}</div>
+              <div key={x.l} className="bg-cream/95 backdrop-blur-sm text-forest-700 rounded-2xl py-4 sm:py-5 shadow-lg">
+                <div className="font-display text-3xl sm:text-5xl font-bold leading-none">
+                  {String(x.v).padStart(2, '0')}
+                </div>
+                <div className="text-[10px] sm:text-xs uppercase tracking-widest text-forest-600/80 mt-2">{x.l}</div>
               </div>
             ))}
           </div>
         </motion.div>
-
-
-
       </div>
+
+      {/* Degrade inferior para empalmar con el fondo de la pagina */}
+      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-cream to-transparent pointer-events-none" />
     </section>
   )
 }

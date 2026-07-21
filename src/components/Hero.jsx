@@ -25,8 +25,9 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="relative overflow-hidden">
-      {/* Foto al corte, ocupa todo el ancho */}
-      <div className="absolute inset-0">
+      {/* Foto al corte, ocupa todo el ancho. Arranca debajo del header (que es blanco
+          opaco) para que no le tape la parte de arriba de la imagen. */}
+      <div className="absolute inset-x-0 bottom-0 top-20 sm:top-28">
         <picture className="block w-full h-full">
           <source
             type="image/webp"
@@ -37,7 +38,7 @@ export default function Hero() {
             src="/img/hero_chs.jpg"
             alt="Congreso CREA Chaco Santiagueño"
             fetchPriority="high"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-[center_20%]"
           />
         </picture>
         {/* Tinte verde de marca, en la linea del tratamiento de la seccion de inscripcion

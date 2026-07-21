@@ -24,7 +24,7 @@ export default function Registration() {
                   alt=""
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-[center_22%]"
+                  className="w-full h-full object-cover object-[center_10%]"
                 />
               </picture>
               <div className="absolute inset-0 bg-forest-700/75 mix-blend-multiply" />

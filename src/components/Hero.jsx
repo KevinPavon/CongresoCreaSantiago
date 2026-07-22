@@ -54,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-cream rounded-2xl border-2 border-forest-400 shadow-xl px-8 py-5 sm:px-14 sm:py-7"
+          className="bg-white rounded-2xl border-2 border-forest-400 shadow-xl px-8 py-5 sm:px-14 sm:py-7"
         >
           <div className="font-display text-2xl sm:text-4xl font-bold text-forest-600 tracking-wide">
             {event.date}

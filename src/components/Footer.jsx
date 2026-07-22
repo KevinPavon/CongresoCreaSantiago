@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           {/* El logo tiene el texto en verde oscuro y gris: sobre la banda verde no contrasta,
               asi que va sobre una placa clara. */}
-          <div className="inline-block bg-cream rounded-2xl px-5 py-4 shadow-lg">
+          <div className="inline-block bg-white rounded-2xl px-5 py-4 shadow-lg">
             <img
               src="/img/LOGOS CHS_horizontal_Crea.png"
               alt={event.name}

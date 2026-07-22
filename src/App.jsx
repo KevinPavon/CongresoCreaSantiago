@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 import LoadingScreen from './components/LoadingScreen'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -15,16 +15,10 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const handleComplete = useCallback(() => setLoading(false), [])
 
-  // Mientras esta la pantalla de carga no se puede scrollear el sitio de atras.
-  useEffect(() => {
-    document.body.style.overflow = loading ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [loading])
-
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      {/* La pantalla de carga maneja su propio fundido de salida y recien
-          entonces avisa para desmontarse. */}
+      {/* Solo se muestra si la carga se demora: si es rapida no llega a verse.
+          Maneja su propio fundido de salida y recien entonces avisa para desmontarse. */}
       {loading && <LoadingScreen onComplete={handleComplete} />}
 
       {/* El sitio se monta desde el principio, por detras de la pantalla de carga,

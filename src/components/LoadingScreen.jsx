@@ -1,43 +1,60 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-// Tiempo minimo en pantalla: si la carga es instantanea, evita que la pantalla
-// aparezca y desaparezca de golpe.
-const MIN_MS = 500
+// Periodo de gracia: si la pagina termina de cargar antes de esto, la pantalla
+// no llega a mostrarse nunca y se pasa directo al sitio. Cuando la carga se
+// vuelva mas pesada (por ejemplo al sumar los logos de sponsors), aparece sola.
+const DELAY_MS = 500
+// Una vez que se mostro, se mantiene este minimo para que no sea un parpadeo.
+const MIN_VISIBLE_MS = 500
 // Tope de seguridad: si algun recurso tarda o falla, el sitio se muestra igual.
 const MAX_MS = 2500
 // Debe coincidir con la duracion de la transicion de opacidad de abajo.
 const FADE_MS = 500
 
 export default function LoadingScreen({ onComplete }) {
+  const [visible, setVisible] = useState(false)
   const [progress, setProgress] = useState(0)
   const [saliendo, setSaliendo] = useState(false)
 
   useEffect(() => {
-    const inicio = performance.now()
     // Guard local a cada corrida del efecto, no un ref: con StrictMode el componente
     // se monta, se desmonta y se vuelve a montar, y un ref compartido haria que el
     // segundo montaje saliera sin programar el cierre.
     let listo = false
-    let raf, tope, cierre, fin
+    let mostradaEn = null
+    let raf, espera, tope, cierre, fin
 
-    // Avanza suave hasta 90%; el 100% lo marca la carga real de la pagina.
-    const avanzar = () => {
-      setProgress((p) => (p < 90 ? p + (90 - p) * 0.05 : p))
+    // A los DELAY_MS, si todavia no termino de cargar, recien ahi se muestra.
+    espera = setTimeout(() => {
+      if (listo) return
+      mostradaEn = performance.now()
+      setVisible(true)
+      const avanzar = () => {
+        setProgress((p) => (p < 90 ? p + (90 - p) * 0.05 : p))
+        raf = requestAnimationFrame(avanzar)
+      }
       raf = requestAnimationFrame(avanzar)
-    }
-    raf = requestAnimationFrame(avanzar)
+    }, DELAY_MS)
 
     const terminar = () => {
       if (listo) return
       listo = true
-      cancelAnimationFrame(raf)
+      clearTimeout(espera)
+      if (raf) cancelAnimationFrame(raf)
+
+      // Nunca se llego a mostrar: se pasa al sitio sin transicion.
+      if (mostradaEn === null) {
+        onComplete()
+        return
+      }
+
       setProgress(100)
-      const restante = Math.max(0, MIN_MS - (performance.now() - inicio))
+      const restante = Math.max(0, MIN_VISIBLE_MS - (performance.now() - mostradaEn))
       cierre = setTimeout(() => {
         setSaliendo(true)
         fin = setTimeout(onComplete, FADE_MS)
-      }, restante + 300)
+      }, restante + 200)
     }
 
     if (document.readyState === 'complete') terminar()
@@ -46,13 +63,23 @@ export default function LoadingScreen({ onComplete }) {
 
     return () => {
       listo = true
-      cancelAnimationFrame(raf)
+      if (raf) cancelAnimationFrame(raf)
+      clearTimeout(espera)
       clearTimeout(tope)
       clearTimeout(cierre)
       clearTimeout(fin)
       window.removeEventListener('load', terminar)
     }
   }, [onComplete])
+
+  // El scroll se bloquea solo si la pantalla llego a mostrarse.
+  useEffect(() => {
+    if (!visible) return
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [visible])
+
+  if (!visible) return null
 
   return (
     <div

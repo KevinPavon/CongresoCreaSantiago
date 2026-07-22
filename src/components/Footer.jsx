@@ -48,8 +48,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Barra inferior en claro: ademas de cerrar la banda verde, deja legible el logo de Base2 */}
-      <div className="bg-cream text-ink-700">
+      {/* Barra inferior en blanco: ademas de cerrar la banda verde, deja legible el logo de Base2 */}
+      <div className="bg-white text-ink-700">
         <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <span className="text-ink-700/60 text-center sm:text-left">
             © {new Date().getFullYear()} {event.name}. Todos los derechos reservados.

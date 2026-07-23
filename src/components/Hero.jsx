@@ -27,7 +27,18 @@ export default function Hero() {
     <section id="inicio" className="relative overflow-hidden">
       {/* Foto al corte, ocupa todo el ancho. Arranca debajo del header (que es blanco
           opaco) para que no le tape la parte de arriba de la imagen. */}
-      <div className="absolute inset-x-0 bottom-0 top-20 sm:top-28">
+      <div
+        className="absolute inset-x-0 bottom-0 top-20 sm:top-28"
+        style={{
+          // La foto se desvanece hacia abajo y deja ver el fondo real de la pagina.
+          // Asi el degrade va del tono de la foto al tono del fondo sin tener que
+          // hardcodear un color: empalma exacto con la trama y los tintes del body.
+          WebkitMaskImage:
+            'linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,0.6) 78%, rgba(0,0,0,0) 100%)',
+          maskImage:
+            'linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,0.6) 78%, rgba(0,0,0,0) 100%)',
+        }}
+      >
         <picture className="block w-full h-full">
           <source
             type="image/webp"
@@ -45,6 +56,7 @@ export default function Hero() {
             pero mas suave, para que la foto conserve presencia. */}
         <div className="absolute inset-0 bg-forest-700/55 mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-t from-forest-800/55 via-transparent to-forest-800/25" />
+
       </div>
 
       {/* Contenido sobre la imagen */}
@@ -94,8 +106,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Degrade inferior para empalmar con el fondo de la pagina */}
-      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-cream to-transparent pointer-events-none" />
     </section>
   )
 }

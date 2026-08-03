@@ -3,8 +3,8 @@ import { sponsors } from '../data/siteData'
 
 const tiers = [
   { key: 'estrategicos',  label: 'Aliado Estratégico', cardH: 'h-28 sm:h-32' },
-  { key: 'patrocinantes', label: 'Patrocinante',        cardH: 'h-20 sm:h-24' },
-  { key: 'auspiciantes',  label: 'Auspiciante',         cardH: 'h-16 sm:h-20' },
+  { key: 'patrocinantes', label: 'Patrocinante',        cardH: 'h-24 sm:h-28' },
+  { key: 'auspiciantes',  label: 'Auspiciante',         cardH: 'h-20 sm:h-24' },
 ]
 
 export default function Sponsors() {
@@ -33,9 +33,11 @@ export default function Sponsors() {
                       s.logo ? (
                         <div
                           key={i}
-                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 hover:shadow-md transition-all duration-300 grid place-content-center p-5`}
+                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 transition-all duration-300 overflow-hidden`}
                         >
-                          <img src={s.logo} alt={s.name} className="max-h-full max-w-full object-contain" />
+                          <div className="w-full h-full flex items-center justify-center p-4">
+                            <img src={s.logo} alt={s.name} className="max-h-full max-w-full object-contain" />
+                          </div>
                         </div>
                       ) : (
                         <div

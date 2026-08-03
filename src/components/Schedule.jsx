@@ -1,85 +1,109 @@
 import { useState } from 'react'
+import { HiSpeakerphone, HiUserGroup, HiChevronDown } from 'react-icons/hi'
+import { MdRestaurant } from 'react-icons/md'
 import ScrollReveal from './ScrollReveal'
 import { schedule } from '../data/siteData'
 
+const TRACK = {
+  auditorio:  { label: 'Auditorio',            Icon: HiSpeakerphone, textCls: 'text-forest-600',     iconBg: 'bg-forest-400/10'      },
+  conexiones: { label: 'Mesas de Conexiones',  Icon: HiUserGroup,    textCls: 'text-terracotta-600', iconBg: 'bg-terracotta-300/20'  },
+  patio:      { label: 'Patio Santiagueño',    Icon: MdRestaurant,   textCls: 'text-sand-500',       iconBg: 'bg-sand-100'           },
+}
+
 export default function Schedule() {
   const [activeDay, setActiveDay] = useState(0)
-  const [activeTrack, setActiveTrack] = useState(0)
-  const day = schedule[activeDay]
-  const track = day.tracks[activeTrack]
+  const [openItem, setOpenItem] = useState(null)
 
-  const handleDayChange = (i) => {
-    setActiveDay(i)
-    setActiveTrack(0)
-  }
+  const handleDayChange = (i) => { setActiveDay(i); setOpenItem(null) }
+  const toggle = (i) => setOpenItem(openItem === i ? null : i)
+
+  const day = schedule[activeDay]
 
   return (
-    <section id="programa" className="relative py-14 sm:py-20 overflow-hidden bg-white">
-      {/* Trama de fondo */}
+    <section id="programa" className="relative py-14 sm:py-20 bg-white overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0 -z-10 opacity-[0.07]"
-        style={{ backgroundImage: "url('/img/Trama (1).svg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: "url('/img/Trama (1).svg')", backgroundSize: 'cover' }}
         aria-hidden
       />
       <div className="container-x">
         <ScrollReveal>
           <p className="eyebrow">Programa</p>
-          <h2 className="h-display text-4xl sm:text-5xl mt-3">Dos días para pensar e intercambiar</h2>
+          <h2 className="h-display text-4xl sm:text-5xl mt-3">Cronograma</h2>
         </ScrollReveal>
 
         {/* Pestañas de día */}
-        <div className="mt-10 flex flex-wrap gap-2">
+        <div className="mt-10 flex gap-3 flex-wrap">
           {schedule.map((d, i) => (
             <button
               key={i}
               onClick={() => handleDayChange(i)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium uppercase tracking-wide transition ${
+              className={`px-6 py-3 rounded-full font-display font-semibold uppercase tracking-wide text-sm transition-all ${
                 activeDay === i
-                  ? 'bg-forest-700 text-cream shadow'
-                  : 'bg-cream text-forest-700 border border-forest-700/20 hover:border-forest-700'
+                  ? 'bg-forest-700 text-cream shadow-md'
+                  : 'bg-cream text-forest-700 border border-forest-700/30 hover:border-forest-700'
               }`}
             >
-              {d.day} · <span className="opacity-70">{d.date}</span>
+              {d.day} <span className="font-normal normal-case tracking-normal opacity-70">| {d.date}</span>
             </button>
           ))}
         </div>
 
-        {/* Pestañas de sala */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {day.tracks.map((t, i) => (
-            <button
-              key={i}
-              onClick={() => setActiveTrack(i)}
-              className={`px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition ${
-                activeTrack === i
-                  ? 'bg-terracotta-500 text-cream shadow'
-                  : 'bg-cream text-terracotta-600 border border-terracotta-500/30 hover:border-terracotta-500'
-              }`}
-            >
-              {t.name}
-            </button>
+        {/* Leyenda de referencias */}
+        <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 bg-cream/70 border border-sand-200 rounded-2xl px-5 py-3 text-sm text-ink-700">
+          <span className="text-xs font-semibold uppercase tracking-wider opacity-50 mr-1">Referencias:</span>
+          {Object.values(TRACK).map(({ label, Icon, textCls }) => (
+            <span key={label} className="flex items-center gap-1.5">
+              <Icon className={`text-lg ${textCls}`} />
+              <span>{label}</span>
+            </span>
           ))}
         </div>
 
-        <div className="mt-10 relative">
-          <div className="absolute left-5 sm:left-24 top-2 bottom-2 w-px bg-sand-300" aria-hidden />
-          <ol className="space-y-5">
-            {track.items.map((it, i) => (
-              <ScrollReveal key={i} delay={i * 0.05}>
-                <li className="relative pl-14 sm:pl-40 group">
-                  <div className="absolute left-0 top-1 w-20 sm:w-24 font-display text-xl text-terracotta-600 hidden sm:block">
-                    {it.time}
+        {/* Lista acordeón */}
+        <div className="mt-6 rounded-2xl border border-sand-200 overflow-hidden divide-y divide-sand-200">
+          {day.items.map((item, i) => {
+            const meta = TRACK[item.type]
+            const isOpen = openItem === i
+            const hasDesc = !!item.desc
+
+            return (
+              <div key={i} className={`transition-colors ${isOpen ? 'bg-cream/80' : 'bg-white hover:bg-sand-50'}`}>
+                <button
+                  onClick={() => hasDesc && toggle(i)}
+                  className={`w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 text-left ${hasDesc ? 'cursor-pointer' : 'cursor-default'}`}
+                >
+                  {/* Hora */}
+                  <span className="w-14 sm:w-16 flex-shrink-0 font-display font-semibold text-sm text-terracotta-600">
+                    {item.time}
+                  </span>
+                  {/* Ícono de espacio */}
+                  <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${meta.iconBg}`}>
+                    <meta.Icon className={`text-base ${meta.textCls}`} />
+                  </span>
+                  {/* Título */}
+                  <span className="flex-1 font-display text-base sm:text-lg text-ink-900 font-medium leading-snug">
+                    {item.title}
+                  </span>
+                  {/* Flecha acordeón */}
+                  {hasDesc && (
+                    <HiChevronDown
+                      className={`flex-shrink-0 text-xl text-ink-700/40 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                    />
+                  )}
+                </button>
+
+                {/* Descripción desplegable */}
+                {hasDesc && isOpen && (
+                  <div className="flex gap-3 sm:gap-4 px-4 sm:px-6 pb-5">
+                    <span className="w-14 sm:w-16 flex-shrink-0" aria-hidden />
+                    <span className="w-8 flex-shrink-0" aria-hidden />
+                    <p className="text-sm text-ink-700 leading-relaxed">{item.desc}</p>
                   </div>
-                  <div className="sm:hidden text-xs font-semibold text-terracotta-600 mb-1">{it.time}</div>
-                  <span className="absolute left-3.5 sm:left-[5.45rem] top-3 w-3 h-3 rounded-full bg-terracotta-500 ring-4 ring-cream group-hover:scale-125 transition" />
-                  <div className="bg-cream border border-sand-200 rounded-2xl p-5 hover:border-terracotta-400 transition-all">
-                    <h3 className="font-display text-xl text-ink-900">{it.title}</h3>
-                    {it.desc && <p className="text-sm text-ink-700 mt-1">{it.desc}</p>}
-                  </div>
-                </li>
-              </ScrollReveal>
-            ))}
-          </ol>
+                )}
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

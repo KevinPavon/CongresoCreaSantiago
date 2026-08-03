@@ -1,4 +1,4 @@
-import { HiLocationMarker, HiExternalLink } from 'react-icons/hi'
+import { HiLocationMarker, HiExternalLink, HiPhone, HiTag } from 'react-icons/hi'
 import ScrollReveal from './ScrollReveal'
 import { venue } from '../data/siteData'
 
@@ -21,8 +21,22 @@ export default function Venue() {
             <ul className="space-y-3">
               {venue.hotels.map((h, i) => (
                 <li key={i} className="bg-cream border border-sand-200 rounded-2xl p-4 hover:border-terracotta-400 transition">
-                  <div className="font-medium text-ink-900">{h.name}</div>
-                  <div className="text-sm text-ink-700">{h.desc}</div>
+                  <a href={h.url} target="_blank" rel="noreferrer" className="font-semibold text-forest-600 hover:text-forest-700 flex items-center gap-1.5">
+                    {h.name} <HiExternalLink className="text-sm opacity-60" />
+                  </a>
+                  <p className="text-sm text-ink-700 mt-1 flex items-center gap-1.5">
+                    <HiLocationMarker className="text-terracotta-500 flex-shrink-0" />{h.address}
+                  </p>
+                  {h.phone && (
+                    <p className="text-sm text-ink-700 mt-0.5 flex items-center gap-1.5">
+                      <HiPhone className="text-terracotta-500 flex-shrink-0" />{h.phone}
+                    </p>
+                  )}
+                  {h.rateUrl && (
+                    <a href={h.rateUrl} target="_blank" rel="noreferrer" className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta-600 hover:text-terracotta-700 transition">
+                      <HiTag /> Conocé la tarifa especial
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -10,7 +10,7 @@ export const event = {
   dateISO: '2026-10-07T08:30:00-03:00',
   // Se muestra en dos lineas en el hero, cortando por la coma (formato del flyer).
   location: 'Centro de Convenciones Fórum, Santiago del Estero',
-  registrationUrl: '#',
+  registrationUrl: 'https://redcrea.org.ar/inscripciones/inscripcion_formulario/formularios/?evento_id=101',
 }
 
 export const nav = [
@@ -71,7 +71,7 @@ export const speakers = [
   { name: 'Joan Cwaik', role: 'Autor, profesor en Universidad de San Andrés y Head of Marketing LATAM en Maytronics', bio: 'Autor de cinco libros sobre tecnología y sociedad. Profesor en la Universidad de San Andrés y Head of Marketing LATAM en Maytronics. Columnista en Diario Perfil.', photo: '/oradores/Joan_298-2_baja.jpeg' },
   { name: 'Santiago Bulat', role: 'Economista y consultor. Referente en análisis macroeconómico y divulgación financiera', bio: '', photo: '/oradores/Santiago Bulat.jpg' },
   { name: 'Francisco Iguerabide', role: 'Miembro del CREA Melo - Serrano (Región Centro). Expresidente de CREA', bio: '', photo: '/oradores/Francisco I..jpg' },
-  { name: 'Fernando de Nevares', role: 'Presidente de CREA', bio: 'Miembro de los CREA Bragado (Región Norte de Buenos Aires) y Nómade (Grupo Sin Fronteras). Presidente de CREA.', photo: '/oradores/Fernando de Nevares.png' },
+  { name: 'Fernando de Nevares', role: 'Miembro de los CREA Bragado (Región Norte de Buenos Aires) y Nómade (Grupo Sin Fronteras). Presidente de CREA', bio: 'Miembro de los CREA Bragado (Región Norte de Buenos Aires) y Nómade (Grupo Sin Fronteras). Presidente de CREA.', photo: '/oradores/Fernando de Nevares.png' },
   { name: 'Nicolás Neiff', role: 'Docente e investigador en ecofisiología de cultivos. Responsable de la Mesa Agrícola Región CREA Chaco Santiagueño', bio: 'Docente e investigador en ecofisiología de cultivos en la FCA-UNN. Responsable de la Mesa Agrícola de la Región CREA Chaco Santiagueño.', photo: '/oradores/Nicolas_Neiff.jpg' },
   { name: 'Federico Vartorelli', role: 'Director global de Inteligencia en Mejoramiento Genético de Bayer', bio: '', photo: '/oradores/Federico Vartorelli.jfif' },
   { name: 'Juan Marcos Olivero Vila', role: 'Consultor en estrategia, organización y proyectos de inversión. Técnico de CREA', bio: 'Consultor en estrategia, organización, planeamiento y evaluación de proyectos de inversión. Técnico de CREA.', photo: '/oradores/olivero_vila.jpg' },
@@ -79,8 +79,8 @@ export const speakers = [
 
 export const schedule = [
   {
-    day: 'Día 1',
-    date: 'Mié 7/10',
+    day: 'DÍA 1',
+    date: 'MIÉ 7/10',
     items: [
       { time: '08:30 h', title: 'Acreditaciones', type: 'auditorio' },
       { time: '09:30 h', title: 'Bienvenida institucional', desc: 'Apertura del evento y presentación de la jornada, por Ricardo Bindi.', type: 'auditorio' },
@@ -100,8 +100,8 @@ export const schedule = [
     ],
   },
   {
-    day: 'Día 2',
-    date: 'Jue 8/10',
+    day: 'DÍA 2',
+    date: 'JUE 8/10',
     items: [
       { time: '08:00 h', title: 'Recepción', type: 'auditorio' },
       { time: '08:45 h', title: 'Mesas con foco técnico', desc: 'Intercambio sobre producción, tecnología y manejo para mejorar resultados en el campo.', type: 'conexiones' },
@@ -134,24 +134,24 @@ export const venue = {
 
 export const sponsors = {
   estrategicos: [
-    { name: 'Advanta',  logo: '/sponsors/Estrategico/ADV_logotype_CMYK_positivo.jpg' },
+    { name: 'Advanta',  logo: '/sponsors/Estrategico/ADV_logotype_CMYK_positivo.jpg', imgClass: 'scale-[1.7]' },
     { name: 'COFCO',    logo: '/sponsors/Estrategico/CofcoIntl_primary_cmyk (1) (1).png' },
   ],
   patrocinantes: [
-    { name: 'AGD',        logo: '/sponsors/Patrocinante/Logo AGD.jpg' },
-    { name: 'Experta',    logo: '/sponsors/Patrocinante/Experta APP _ Isologotipo Color.png' },
-    { name: 'Las Marías', logo: '/sponsors/Patrocinante/LA MERCED - NUEVO.png' },
-    { name: 'Terratio',   logo: '/sponsors/Patrocinante/Terratio Logo horizontal verde fondo blanco 400x400.png' },
+    { name: 'AGD',        logo: '/sponsors/Patrocinante/Logo AGD.jpg',                                                imgClass: 'scale-[1.6]' },
+    { name: 'Experta',    logo: '/sponsors/Patrocinante/Experta APP _ Isologotipo Color.png',                        imgClass: 'scale-[1.4]' },
+    { name: 'Las Marías', logo: '/sponsors/Patrocinante/LA MERCED - NUEVO.png',                                     imgClass: 'scale-[1.4]' },
+    { name: 'Terratio',   logo: '/sponsors/Patrocinante/Terratio Logo horizontal verde fondo blanco 400x400.png',   imgClass: 'scale-[1.6]' },
     { name: 'UPL',        logo: '/sponsors/Patrocinante/UPL.png' },
   ],
   auspiciantes: [
-    { name: 'Agross',   logo: '/sponsors/Auspiciante/Agross.jpg' },
-    { name: 'Alltec',   logo: '/sponsors/Auspiciante/JPG_LogoRGB_ALLTEC.jpg' },
-    { name: 'Bayer',    logo: '/sponsors/Auspiciante/bayer_new-02.jpg' },
+    { name: 'Agross',   logo: '/sponsors/Auspiciante/Agross.jpg',                    imgClass: 'scale-[1.5]' },
+    { name: 'Alltec',   logo: '/sponsors/Auspiciante/JPG_LogoRGB_ALLTEC.jpg',        imgClass: 'scale-[1.5]' },
+    { name: 'Bayer',    logo: '/sponsors/Auspiciante/bayer_new-02.jpg',              imgClass: 'scale-[1.5]' },
     { name: 'Brevant',  logo: '/sponsors/Auspiciante/Brevant_HorBlk_Semillas_R.png' },
     { name: 'Chelala',  logo: '/sponsors/Auspiciante/chelala.png' },
-    { name: 'Pampero',  logo: '/sponsors/Auspiciante/pampero.png' },
-    { name: 'Tekron',   logo: '/sponsors/Auspiciante/LogoTektro-02.png' },
+    { name: 'Pampero',  logo: '/sponsors/Auspiciante/pampero.png',                   imgClass: 'scale-[1.5]' },
+    { name: 'Tekron',   logo: '/sponsors/Auspiciante/LogoTektro-02.png',             imgClass: 'scale-[1.5]' },
   ],
 }
 

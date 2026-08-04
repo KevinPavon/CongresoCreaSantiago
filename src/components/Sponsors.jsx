@@ -36,7 +36,7 @@ export default function Sponsors() {
                           className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 transition-all duration-300 overflow-hidden`}
                         >
                           <div className="w-full h-full flex items-center justify-center p-4">
-                            <img src={s.logo} alt={s.name} className="max-h-full max-w-full object-contain" />
+                            <img src={s.logo} alt={s.name} className={`w-full h-full object-contain ${s.imgClass ?? ''}`} />
                           </div>
                         </div>
                       ) : (

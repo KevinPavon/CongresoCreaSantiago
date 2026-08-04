@@ -35,7 +35,7 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <a href="#inscripcion" className="btn-primary text-sm !py-2">
+          <a href="https://redcrea.org.ar/inscripciones/inscripcion_formulario/formularios/?evento_id=101" target="_blank" rel="noreferrer" className="btn-primary text-sm !py-2">
             Inscripciones
           </a>
         </div>
@@ -53,7 +53,7 @@ export default function Header() {
                 {n.label}
               </a>
             ))}
-            <a href="#inscripcion" onClick={() => setOpen(false)} className="btn-primary justify-center mt-2">Inscripciones</a>
+            <a href="https://redcrea.org.ar/inscripciones/inscripcion_formulario/formularios/?evento_id=101" target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="btn-primary justify-center mt-2">Inscripciones</a>
           </div>
         </div>
       )}

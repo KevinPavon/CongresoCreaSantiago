@@ -139,19 +139,19 @@ export const sponsors = {
   ],
   patrocinantes: [
     { name: 'AGD',        logo: '/sponsors/Patrocinante/Logo AGD.jpg',                                                imgClass: 'scale-[1.6]' },
-    { name: 'Experta',    logo: '/sponsors/Patrocinante/Experta APP _ Isologotipo Color.png',                        imgClass: 'scale-[1.4]' },
+    { name: 'Experta',    logo: '/sponsors/Patrocinante/Experta APP _ Isologotipo Color.png',                        imgClass: 'scale-[1.0]' },
     { name: 'Las Marías', logo: '/sponsors/Patrocinante/LA MERCED - NUEVO.png',                                     imgClass: 'scale-[1.4]' },
-    { name: 'Terratio',   logo: '/sponsors/Patrocinante/Terratio Logo horizontal verde fondo blanco 400x400.png',   imgClass: 'scale-[1.6]' },
+    { name: 'Terratio',   logo: '/sponsors/Patrocinante/Terratio Logo horizontal verde fondo blanco 400x400.png',   imgClass: 'scale-[2.1]' },
     { name: 'UPL',        logo: '/sponsors/Patrocinante/UPL.png' },
   ],
   auspiciantes: [
-    { name: 'Agross',   logo: '/sponsors/Auspiciante/Agross.jpg',                    imgClass: 'scale-[1.5]' },
-    { name: 'Alltec',   logo: '/sponsors/Auspiciante/JPG_LogoRGB_ALLTEC.jpg',        imgClass: 'scale-[1.5]' },
+    { name: 'Agross',   logo: '/sponsors/Auspiciante/Agross.jpg',                    imgClass: 'scale-[2.0]' },
+    { name: 'Alltec',   logo: '/sponsors/Auspiciante/JPG_LogoRGB_ALLTEC.jpg',        imgClass: 'scale-[2.0]' },
     { name: 'Bayer',    logo: '/sponsors/Auspiciante/bayer_new-02.jpg',              imgClass: 'scale-[1.5]' },
     { name: 'Brevant',  logo: '/sponsors/Auspiciante/Brevant_HorBlk_Semillas_R.png' },
     { name: 'Chelala',  logo: '/sponsors/Auspiciante/chelala.png' },
-    { name: 'Pampero',  logo: '/sponsors/Auspiciante/pampero.png',                   imgClass: 'scale-[1.5]' },
-    { name: 'Tekron',   logo: '/sponsors/Auspiciante/LogoTektro-02.png',             imgClass: 'scale-[1.5]' },
+    { name: 'Pampero',  logo: '/sponsors/Auspiciante/pampero.png',                   imgClass: 'scale-[2.0]' },
+    { name: 'Tekron',   logo: '/sponsors/Auspiciante/tekron_argentina_logo.jpeg',   imgClass: 'scale-[1.5]' },
   ],
 }
 

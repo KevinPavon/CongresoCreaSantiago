@@ -155,9 +155,9 @@ export const sponsors = {
     { name: 'Tekron',   logo: '/sponsors/Auspiciante/tekron_argentina_logo.jpeg',   imgClass: 'scale-[1.5]' },
   ],
   institucionales: [
-    { name: 'Cámara Argentina de Economías Regionales', logo: '/sponsors/Institucional/camara-economias-regionales.png' },
-    { name: 'Ministerio de Producción',                 logo: '/sponsors/Institucional/ministerio-produccion.png' },
     { name: 'Santiago del Estero',                      logo: '/sponsors/Institucional/santiago-del-estero.png' },
+    { name: 'Ministerio de Producción',                 logo: '/sponsors/Institucional/ministerio-produccion.png' },
+    { name: 'Cámara Argentina de Economías Regionales', logo: '/sponsors/Institucional/camara-economias-regionales.png' },
   ],
 }
 

@@ -2,9 +2,10 @@ import ScrollReveal from './ScrollReveal'
 import { sponsors } from '../data/siteData'
 
 const tiers = [
-  { key: 'estrategicos',  label: 'Aliado Estratégico', cardH: 'h-28 sm:h-32' },
-  { key: 'patrocinantes', label: 'Patrocinante',        cardH: 'h-24 sm:h-28' },
-  { key: 'auspiciantes',  label: 'Auspiciante',         cardH: 'h-20 sm:h-24' },
+  { key: 'estrategicos',   label: 'Aliado Estratégico', cardH: 'h-28 sm:h-32' },
+  { key: 'patrocinantes',  label: 'Patrocinante',        cardH: 'h-24 sm:h-28' },
+  { key: 'auspiciantes',   label: 'Auspiciante',         cardH: 'h-20 sm:h-24' },
+  { key: 'institucionales', label: 'Institucional',      cardH: 'h-24 sm:h-28' },
 ]
 
 export default function Sponsors() {

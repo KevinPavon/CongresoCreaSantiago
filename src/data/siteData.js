@@ -141,6 +141,7 @@ export const sponsors = {
     { name: 'AGD',        logo: '/sponsors/Patrocinante/Logo AGD.jpg',                                                imgClass: 'scale-[1.6]' },
     { name: 'Experta',    logo: '/sponsors/Patrocinante/Experta APP _ Isologotipo Color.png',                        imgClass: 'scale-[1.0]' },
     { name: 'Las Marías', logo: '/sponsors/Patrocinante/LA MERCED - NUEVO.png',                                     imgClass: 'scale-[1.4]' },
+    { name: 'Nidera',     logo: '/sponsors/Patrocinante/nidera.png' },
     { name: 'Terratio',   logo: '/sponsors/Patrocinante/Terratio Logo horizontal verde fondo blanco 400x400.png',   imgClass: 'scale-[2.1]' },
     { name: 'UPL',        logo: '/sponsors/Patrocinante/UPL.png' },
   ],
@@ -152,6 +153,11 @@ export const sponsors = {
     { name: 'Chelala',  logo: '/sponsors/Auspiciante/chelala.png' },
     { name: 'Pampero',  logo: '/sponsors/Auspiciante/pampero.png',                   imgClass: 'scale-[2.0]' },
     { name: 'Tekron',   logo: '/sponsors/Auspiciante/tekron_argentina_logo.jpeg',   imgClass: 'scale-[1.5]' },
+  ],
+  institucionales: [
+    { name: 'Cámara Argentina de Economías Regionales', logo: '/sponsors/Institucional/camara-economias-regionales.png' },
+    { name: 'Ministerio de Producción',                 logo: '/sponsors/Institucional/ministerio-produccion.png' },
+    { name: 'Santiago del Estero',                      logo: '/sponsors/Institucional/santiago-del-estero.png' },
   ],
 }
 

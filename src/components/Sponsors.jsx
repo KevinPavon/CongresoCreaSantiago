@@ -5,7 +5,11 @@ const tiers = [
   { key: 'estrategicos',   label: 'Aliado Estratégico', cardH: 'h-28 sm:h-32' },
   { key: 'patrocinantes',  label: 'Patrocinante',        cardH: 'h-24 sm:h-28' },
   { key: 'auspiciantes',   label: 'Auspiciante',         cardH: 'h-20 sm:h-24' },
-  { key: 'institucionales', label: 'Institucional',      cardH: 'h-24 sm:h-28' },
+  // Institucional: tarjetas uniformes, pero mas anchas y bajas que el resto. Esa
+  // proporcion la marca el logo mas apaisado (Ministerio), que asi llena la
+  // tarjeta; los otros dos, mas cuadrados, quedan limitados por el alto y los
+  // tres terminan viendose de la misma altura.
+  { key: 'institucionales', label: 'Institucional',      cardH: 'h-20 sm:h-24', cardW: 'max-w-[380px]' },
 ]
 
 export default function Sponsors() {
@@ -34,7 +38,7 @@ export default function Sponsors() {
                       s.logo ? (
                         <div
                           key={i}
-                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 transition-all duration-300 overflow-hidden`}
+                          className={`${t.cardH} min-w-[160px] ${t.cardW ?? 'max-w-[240px]'} flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 transition-all duration-300 overflow-hidden`}
                         >
                           <div className="w-full h-full flex items-center justify-center p-4">
                             <img src={s.logo} alt={s.name} className={`w-full h-full object-contain ${s.imgClass ?? ''}`} />
@@ -43,7 +47,7 @@ export default function Sponsors() {
                       ) : (
                         <div
                           key={i}
-                          className={`${t.cardH} min-w-[160px] max-w-[240px] flex-1 rounded-2xl bg-white border border-dashed border-sand-300 grid place-content-center p-5`}
+                          className={`${t.cardH} min-w-[160px] ${t.cardW ?? 'max-w-[240px]'} flex-1 rounded-2xl bg-white border border-dashed border-sand-300 grid place-content-center p-5`}
                         >
                           <span className="text-sm text-ink-700/50 font-medium">{s.name}</span>
                         </div>

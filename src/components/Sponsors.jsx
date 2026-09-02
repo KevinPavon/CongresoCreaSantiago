@@ -2,7 +2,9 @@ import ScrollReveal from './ScrollReveal'
 import { sponsors } from '../data/siteData'
 
 const tiers = [
-  { key: 'estrategicos',   label: 'Aliado Estratégico', cardH: 'h-28 sm:h-32' },
+  // Aliado Estrategico es la categoria que mas destaca: tarjeta mas alta y mas
+  // ancha que el resto para que los dos logos se lean por encima de los demas.
+  { key: 'estrategicos',   label: 'Aliado Estratégico', cardH: 'h-32 sm:h-40', cardW: 'max-w-[340px]' },
   { key: 'patrocinantes',  label: 'Patrocinante',        cardH: 'h-24 sm:h-28' },
   { key: 'auspiciantes',   label: 'Auspiciante',         cardH: 'h-20 sm:h-24' },
   // Institucional: tarjetas uniformes, pero mas anchas y bajas que el resto. Esa
@@ -38,7 +40,7 @@ export default function Sponsors() {
                       s.logo ? (
                         <div
                           key={i}
-                          className={`${t.cardH} min-w-[160px] ${t.cardW ?? 'max-w-[240px]'} flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 transition-all duration-300 overflow-hidden`}
+                          className={`${t.cardH} min-w-[160px] ${s.cardClass ?? t.cardW ?? 'max-w-[240px]'} flex-1 rounded-2xl bg-white border border-sand-200 hover:border-terracotta-400 transition-all duration-300 overflow-hidden`}
                         >
                           <div className="w-full h-full flex items-center justify-center p-4">
                             <img src={s.logo} alt={s.name} className={`w-full h-full object-contain ${s.imgClass ?? ''}`} />
@@ -47,7 +49,7 @@ export default function Sponsors() {
                       ) : (
                         <div
                           key={i}
-                          className={`${t.cardH} min-w-[160px] ${t.cardW ?? 'max-w-[240px]'} flex-1 rounded-2xl bg-white border border-dashed border-sand-300 grid place-content-center p-5`}
+                          className={`${t.cardH} min-w-[160px] ${s.cardClass ?? t.cardW ?? 'max-w-[240px]'} flex-1 rounded-2xl bg-white border border-dashed border-sand-300 grid place-content-center p-5`}
                         >
                           <span className="text-sm text-ink-700/50 font-medium">{s.name}</span>
                         </div>

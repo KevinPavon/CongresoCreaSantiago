@@ -79,6 +79,7 @@ export const speakers = [
   { name: 'Federico Vartorelli', role: 'Director global de Inteligencia en Mejoramiento Genético de Bayer', bio: '', photo: '/oradores/Federico Vartorelli.jfif' },
   { name: 'Juan Marcos Olivero Vila', role: 'Consultor en estrategia, organización y proyectos de inversión. Técnico de CREA', bio: 'Consultor en estrategia, organización, planeamiento y evaluación de proyectos de inversión. Técnico de CREA.', photo: '/oradores/olivero_vila.jpg' },
   { name: 'José Lizzi', role: 'Ingeniero agrónomo, consultor y especialista en sistemas de producción y gestión estratégica de empresas agropecuarias', bio: 'Ingeniero agrónomo, consultor y especialista en sistemas de producción y gestión estratégica de empresas agropecuarias.', photo: '/oradores/Jose Lizzi.jpg' },
+  { name: 'Bernardo Piazzardi', role: 'Profesor e investigador del Centro Agronegocios de la Universidad Austral. Consultor en estrategia de agronegocios', bio: 'Profesor e investigador del Centro Agronegocios de la Universidad Austral. Consultor en estrategia de agronegocios para empresas e instituciones de Latinoamérica.', photo: '/oradores/Piazzardi-iweb.jpg' },
 ]
 
 export const schedule = [
@@ -95,7 +96,7 @@ export const schedule = [
       { time: '14:30 h', title: 'Riesgo del maíz y los modelos productivos', desc: 'Estrategias para gestionar la incertidumbre en la producción, por Nicolás Neiff y Federico Vartorelli.', type: 'auditorio' },
       { time: '15:00 h', title: 'Encuentro con Asesores CREA', desc: 'Para profesionales y estudiantes del sector agro que quieran conocer el rol del Asesor CREA, su metodología y ser parte de una red con oportunidades de crecimiento.', type: 'conexiones' },
       { time: '15:00 h', title: 'Oportunidades y desafíos de la ganadería en la región', desc: 'Claves para entender el presente y las perspectivas de la actividad, por José Lizzi.', type: 'auditorio' },
-      { time: '15:30 h', title: 'El futuro de las empresas en Chaco Santiagueño', desc: 'Escenarios y decisiones que marcarán el rumbo, orador a confirmar.', type: 'auditorio' },
+      { time: '15:30 h', title: 'Cómo repensar el negocio y nuestras empresas', desc: 'Nuevas formas de producir, integrar y diversificar para detectar oportunidades y generar valor, por Bernardo Piazzardi.', type: 'auditorio' },
       { time: '16:00 h', title: 'Panel de empresarios', desc: 'Experiencias, aprendizajes y desafíos en la gestión, oradores a confirmar.', type: 'auditorio' },
       { time: '16:45 h', title: 'Coffee break', type: 'patio' },
       { time: '17:30 h', title: 'Perspectivas del mercado de granos', desc: 'El escenario actual de los mercados, las tendencias de precios y las claves para anticiparse y tomar mejores decisiones, por Paulina Lescano.', type: 'auditorio' },
@@ -112,7 +113,7 @@ export const schedule = [
       { time: '08:30 h', title: 'Presentación de la jornada', type: 'auditorio' },
       { time: '08:45 h', title: 'Liderazgo y autoliderazgo', desc: 'Claves para liderar y liderarse en contextos desafiantes, por Juan Marcos Olivero Vila.', type: 'auditorio' },
       { time: '08:45 h', title: 'Mesas con foco técnico', desc: 'Intercambio sobre producción, tecnología y manejo para mejorar resultados en el campo.', type: 'conexiones' },
-      { time: '09:15 h', title: 'Gestión de equipos de trabajo', desc: 'Herramientas para potenciar equipos y mejorar resultados, por Fernando Preumayr.', type: 'auditorio' },
+      { time: '09:15 h', title: 'El punto ciego: claves para diagnosticar el capital humano', desc: 'Una mirada sobre los desafíos de gestionar personas y equipos, por Fernando Preumayr.', type: 'auditorio' },
       { time: '10:00 h', title: 'Coffee break', type: 'patio' },
       { time: '10:30 h', title: 'Charla a confirmar', type: 'auditorio' },
       { time: '10:30 h', title: 'Mesas de Conexiones con foco empresarial', desc: 'Intercambio sobre estrategia, gestión y modelos de negocio para potenciar la empresa.', type: 'conexiones' },
@@ -142,6 +143,7 @@ export const sponsors = {
   estrategicos: [
     { name: 'Advanta',  logo: '/sponsors/Estrategico/advanta.png' },
     { name: 'COFCO',    logo: '/sponsors/Estrategico/CofcoIntl_primary_cmyk (1) (1).png' },
+    { name: 'Maxan',    logo: '/sponsors/Estrategico/Logo maxan PIE (1) (1).png' },
   ],
   patrocinantes: [
     { name: 'AGD',        logo: '/sponsors/Patrocinante/Logo AGD.jpg',                                                imgClass: 'scale-[1.6]' },
@@ -157,10 +159,12 @@ export const sponsors = {
     { name: 'La Quinta Agro',         logo: '/sponsors/Auspiciante/la-quinta-agro.jpg' },
     { name: 'Bruder Co.',             logo: '/sponsors/Auspiciante/bruder-co.png' },
     { name: 'Agronegocios del Norte', logo: '/sponsors/Auspiciante/agronegocios-del-norte.png' },
+    { name: 'Albor',                 logo: '/sponsors/Auspiciante/albor.png' },
     { name: 'Alltec',                logo: '/sponsors/Auspiciante/JPG_LogoRGB_ALLTEC.jpg',        imgClass: 'scale-[2.0]' },
     { name: 'Altina',                logo: '/sponsors/Auspiciante/logo_altina_1_transparente.png' },
     { name: 'Bayer',                 logo: '/sponsors/Auspiciante/bayer_new-02.jpg',              imgClass: 'scale-[1.5]' },
     { name: 'Brevant',               logo: '/sponsors/Auspiciante/Brevant_HorBlk_Semillas_R.png' },
+    { name: 'Cabaña Pilagá',         logo: '/sponsors/Auspiciante/cabana-pilaga.png' },
     { name: 'Cabaña Santa Juana',    logo: '/sponsors/Auspiciante/logotipo Cabaña Santa Juana con Juamarita SA.jpg.jpeg' },
     { name: 'Finca María del Pilar', logo: '/sponsors/Auspiciante/Finca Maria del Pilar.jpeg' },
     { name: 'Grupo Perez Curbelo',   logo: '/sponsors/Auspiciante/GPCLogos.png' },
@@ -169,12 +173,14 @@ export const sponsors = {
     // El lockup de John Deere es casi 10:1: con cualquier escala se sale de la
     // tarjeta y se ve cortado, asi que va sin escalar y en una tarjeta mas ancha.
     { name: 'John Deere',            logo: '/sponsors/Auspiciante/Logo Horizontal a color.png',  cardClass: 'max-w-[320px]' },
+    { name: 'Tanzi',                 logo: '/sponsors/Auspiciante/Tanzi.jpeg' },
     { name: 'Tekron',                logo: '/sponsors/Auspiciante/tekron_argentina_logo.jpeg',   imgClass: 'scale-[1.5]' },
   ],
   institucionales: [
     { name: 'Santiago del Estero',                      logo: '/sponsors/Institucional/santiago-del-estero.png',  imgClass: 'scale-[1.0] max-w-[220px]' },
     { name: 'Ministerio de Producción',                 logo: '/sponsors/Institucional/ministerio-produccion.png', imgClass: 'scale-[1.55] max-w-[210px]' },
     { name: 'Cámara Argentina de Economías Regionales', logo: '/sponsors/Institucional/camara-economias-regionales.png', imgClass: 'scale-[1.62] max-w-[205px]' },
+    { name: 'Acompaña Brangus',                         logo: '/sponsors/Institucional/identidad-acompana-brangus.png', imgClass: 'scale-[1.3]' },
   ],
 }
 

@@ -186,7 +186,7 @@ export const sponsors = {
   institucionales: [
     { name: 'Santiago del Estero',                      logo: '/sponsors/Institucional/santiago-del-estero.png',  imgClass: 'scale-[1.0] max-w-[220px]' },
     { name: 'Ministerio de Producción',                 logo: '/sponsors/Institucional/ministerio-produccion.png', imgClass: 'scale-[1.55] max-w-[210px]' },
-    { name: 'Cámara Argentina de Economías Regionales', logo: '/sponsors/Institucional/camara-economias-regionales.png', imgClass: 'scale-[1.62] max-w-[205px]' },
+    { name: 'Cámara Argentina de Economías Regionales', logo: '/sponsors/Institucional/camara-economias-regionales.png', imgClass: 'max-w-[240px]' },
     { name: 'Acompaña Brangus',                         logo: '/sponsors/Institucional/identidad-acompana-brangus.png', imgClass: 'scale-[1.3]' },
     { name: 'Dignamente',                               logo: '/sponsors/Institucional/dignamente.png' },
     { name: 'Haciendo Caminos',                         logo: '/sponsors/Institucional/haciendo-caminos.png' },
